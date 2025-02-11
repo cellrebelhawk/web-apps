@@ -1,0 +1,19 @@
+<h1>Hello, welcome to Dice!!</h1> 
+
+
+<% 
+  die1 = rand(1..6) 
+  die2 = rand(1..6)
+  total = die1 + die2
+%>
+
+<p> Die one equals to <%=die1 %></p>
+<p> Die two equals to <%=die2 %></p>
+
+<button onclick="myFunction()">Calculate</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Both dice together sum up to <%= total %>";
+}
+</script>

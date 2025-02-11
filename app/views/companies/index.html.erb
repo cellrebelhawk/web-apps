@@ -1,0 +1,24 @@
+<h2>Welcome to companies</h2>
+
+<h3>Method 1:</h3>
+<p>Number of companies: <%=Company.all.count%></p>
+
+<h3>Method 2:</h3>
+<% companies = Company.all%>
+<p>Number of companies: <%=companies.count%></p>
+
+<p>---</p>
+
+<ul>
+  <% for company in companies%>
+  <li><%=company["name"]%></li>
+  <% end %>
+</ul>
+
+<% contacts = Contact.all%>
+
+<ul>
+  <% for contact in contacts%>
+  <li><%=contact["first_name"]%> <%=contact["last_name"]%></li>
+  <% end %>
+</ul>
